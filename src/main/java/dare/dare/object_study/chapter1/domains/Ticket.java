@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 /**
  * 공연 티켓
@@ -7,7 +7,12 @@ package dare.dare.object_study.domains;
 public class Ticket {
     private Long fee;
 
+    public Ticket(Long fee) {
+        this.fee = fee;
+    }
+
     public Long getFee() {
-        return fee;
+        System.out.println("Ticket.getFee: fee = "+this.fee);
+        return this.fee;
     }
 }

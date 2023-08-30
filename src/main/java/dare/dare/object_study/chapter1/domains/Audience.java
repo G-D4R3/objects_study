@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 /**
  * 관람객
@@ -11,6 +11,6 @@ public class Audience {
     }
 
     public Bag getBag() {
-        return bag;
+        return this.bag;
     }
 }

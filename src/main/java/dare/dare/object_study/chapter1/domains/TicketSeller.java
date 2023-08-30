@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 /**
  * 판매원
@@ -13,6 +13,6 @@ public class TicketSeller {
     }
 
     public TicketOffice getTicketOffice() {
-        return ticketOffice;
+        return this.ticketOffice;
     }
 }

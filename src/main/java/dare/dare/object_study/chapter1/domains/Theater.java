@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 /**
  * 소극장
@@ -21,12 +21,14 @@ public class Theater {
      */
     public void enter(Audience audience) {
         if (audience.getBag().hasInvitation()) {
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
+            System.out.println("Theater.enter: has Intvitation");
+            Ticket ticket = this.ticketSeller.getTicketOffice().getTicket();
             audience.getBag().setTicket(ticket);
         } else {
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
+            System.out.println("Theater.enter: hasn't Intvitation");
+            Ticket ticket = this.ticketSeller.getTicketOffice().getTicket();
             audience.getBag().minusAmount(ticket.getFee());
-            ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
+            this.ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
             audience.getBag().setTicket(ticket);
         }
     }

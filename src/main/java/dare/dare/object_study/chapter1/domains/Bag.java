@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 /**
  * 가방
@@ -35,6 +35,7 @@ public class Bag {
      * @param ticket
      */
     public void setTicket(Ticket ticket) {
+        System.out.println("Bag.setTicket");
         this.ticket = ticket;
     }
 
@@ -43,6 +44,7 @@ public class Bag {
     }
 
     public void minusAmount(Long amount) {
+        System.out.println("Bag.minusAmount: amount = "+amount);
         this.amount -= amount;
     }
 }

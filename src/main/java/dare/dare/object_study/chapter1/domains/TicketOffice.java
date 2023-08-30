@@ -1,4 +1,4 @@
-package dare.dare.object_study.domains;
+package dare.dare.object_study.chapter1.domains;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,10 +24,12 @@ public class TicketOffice {
      * @return Ticket
      */
     public Ticket getTicket() {
-        return tickets.remove(0);
+        System.out.println("TicketOffice.getTicket");
+        return this.tickets.remove(0);
     }
 
     public void plusAmount(Long amount) {
+        System.out.println("TicketOffice.plusAmount: amount = "+amount);
         this.amount += amount;
     }
 
