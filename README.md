@@ -33,3 +33,5 @@
   - 관람객과 판매원이 자신의 일을 스스로 처리한다는 직관을 벗어남
 - 해결 방법
   - Theater가 Audience와 TicketSeller에 관해 너무 세세한 부분까지 알지 못하도록 정보 차단
+  - Theater에서 TicketOffice로의 의존성이 제거되어 TicketOffice와 협력하는 TicketSeller의 내부 구현이 성공적으로 캡슐화
+  ![그림 1.4.png](./readme_assets/pic.1.4.png)
