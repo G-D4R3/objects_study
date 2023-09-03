@@ -31,7 +31,23 @@
 - 코드를 이해하기 어려운 이유
   - Theater가 관람객의 가방과 판매원의 매표소에 직접 접근하기 때문
   - 관람객과 판매원이 자신의 일을 스스로 처리한다는 직관을 벗어남
-- 해결 방법
+- 해결 방법 (a)
   - Theater가 Audience와 TicketSeller에 관해 너무 세세한 부분까지 알지 못하도록 정보 차단
   - Theater에서 TicketOffice로의 의존성이 제거되어 TicketOffice와 협력하는 TicketSeller의 내부 구현이 성공적으로 캡슐화
   ![그림 1.4.png](./readme_assets/pic.1.4.png)
+- 해결 방법 (b)
+  - 해결 방법 (a)로 개선해도 Audience가 TicketSeller 입장에서 완전히 자율적이지 못함
+  - Audience의 Bag에 접근하는 객체를 TicketSeller가 아닌 Audience로 이동하여 캡슐화
+  - TicketSeller가 Audience의 인터페이스에만 의존(필요한 의존)
+  ![그림 1.6.png](./readme_assets/pic.1.6.png)
+- 절차적 프로그래밍 (그림 1.2)
+  - 그림 1.2는 절차적 프로그래밍 방식으로 작성된 코드의 전형적인 의존성 구조
+    - Theater.enter : Process
+    - Audience, TicketSeller, Bag, TicketOffice : Data
+  - Theater에 책임이 중앙집중
+    ![그림 1.7.png](./readme_assets/pic.1.7.png)
+- 객체 지향 프로그래밍
+  - 각 객체는 자신을 스스로 책임짐
+  - 객체에 어떤 책임을 할당할 것이냐에 대한 초점
+  - 책임이 분산된 객체 지향 프로그래밍
+    ![그림 1.8.png](./readme_assets/pic.1.8.png)
