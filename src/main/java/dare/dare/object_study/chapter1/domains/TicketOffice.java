@@ -19,6 +19,16 @@ public class TicketOffice {
     }
 
     /**
+     * 티켓 판매
+     * Audience에게 ticket 건네주고 받은 ticket값을 plusAmount
+     * @param audience
+     */
+    public void sellTicketTo(Audience audience) {
+        plusAmount(audience.buy(getTicket()));
+    }
+
+
+    /**
      * tickets 컬렉션에서 맨 첫 번째 위치에 저장된 Ticket을 반환
      *
      * @return Ticket
@@ -28,8 +38,8 @@ public class TicketOffice {
         return this.tickets.remove(0);
     }
 
-    public void plusAmount(Long amount) {
-        System.out.println("TicketOffice.plusAmount: amount = "+amount);
+    private void plusAmount(Long amount) {
+        System.out.println("TicketOffice.plusAmount: amount = " + amount);
         this.amount += amount;
     }
 

@@ -15,18 +15,12 @@ public class Audience {
     }
 
     /**
-     * (chapter1.3) 티켓 구매
+     * (chapter1.4) 티켓 구매
+     * Ticket을 구매해서 가방에 넣음
      * @param ticket
-     * @return ticket.getFee() or 0L
+     * @return have to pay fee
      */
     public Long buy(Ticket ticket) {
-        if (bag.hasInvitation()) {
-            bag.setTicket(ticket);
-            return 0L;
-        } else {
-            bag.setTicket(ticket);
-            bag.minusAmount(ticket.getFee());
-            return ticket.getFee();
-        }
+        return bag.hold(ticket);
     }
 }

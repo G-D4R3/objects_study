@@ -51,3 +51,13 @@
   - 객체에 어떤 책임을 할당할 것이냐에 대한 초점
   - 책임이 분산된 객체 지향 프로그래밍
     ![그림 1.8.png](./readme_assets/pic.1.8.png)
+- 해결 방법 (c)
+  - Audience의 Bag에게 자율성 부과
+  - TicketSeller의 TicketOffice에게 자율성 부과
+    - plusAmount()를 private으로 변경 가능
+    - 단, TicketOffice와 Audience간의 의존성 추가
+    - TicketOffice의 자율성은 높였지만 전체 결합도 상승
+    ![그림 1.9.png](./readme_assets/pic.1.9.png)
+- 실생활과의 괴리
+  - Audience와 TicketSeller는 실생활에서도 자신의 일을 자신이 처리
+  - Theater, Bag, TickeOffice는 그렇지 않음 -> 객체 지향에서는 능동적이고 자율적인 존재로 변화: (의인화)

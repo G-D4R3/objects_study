@@ -17,9 +17,10 @@ public class TicketSeller {
     }
 
     /**
-     * (chapter1.3) 티켓 판매
+     * (chapter1.4) 티켓 판매
+     * ticketOffice가 Audience에게 ticket을 판매하는 것을 중재
      */
     public void sellTo(Audience audience) {
-        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+        ticketOffice.sellTicketTo(audience);
     }
 }
