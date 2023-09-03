@@ -79,3 +79,6 @@
 - 협력 관계 (1)
   - Screening, Reservation, Movie 사이의 협력 관계
   ![그림 2.5.png](./readme_assets/pic.2.5.png)
+- 협력 관계 (2)
+  - 영화 가격 계산에 참여하는 모든 클래스 사이의 관계
+  ![그림 2.6.png](./readme_assets/pic.2.6.png)
