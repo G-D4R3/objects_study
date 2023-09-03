@@ -61,3 +61,5 @@
 - 실생활과의 괴리
   - Audience와 TicketSeller는 실생활에서도 자신의 일을 자신이 처리
   - Theater, Bag, TickeOffice는 그렇지 않음 -> 객체 지향에서는 능동적이고 자율적인 존재로 변화: (의인화)
+
+## chapter 2. 객체지향 프로그래밍
